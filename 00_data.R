@@ -1,6 +1,29 @@
 # 设置app标题-----
 
-app_title <-'App Template';
+app_title <-'生产参谋数据平台V1.0';
+
+
+
+conn <- conn_rds('nsic')
+
+
+shopInfo <- function(){
+  sql <- "select *from t_sycm_shopInfo"
+  res <- sql_select(conn,sql)
+  return(res)
+}
+
+shopInfoCN <- function(){
+  data <-shopInfo()
+  names(data) <-c('访客数','访客数同比','浏览量','浏览量同比','人均浏览量','人均浏览量同比','关注店铺人数','关注店铺人数同比')
+  return(data)
+}
+
+
+mydata <- shopInfoCN()
+mydata
+
+
 
 
 # 设置3条消息框------
