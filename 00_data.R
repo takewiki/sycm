@@ -1,6 +1,6 @@
 # 设置app标题-----
 
-app_title <-'生产参谋数据平台V1.0';
+app_title <-'生产参谋数据平台V2.0';
 
 
 
@@ -19,6 +19,18 @@ shopInfoCN <- function(){
   return(data)
 }
 
+
+sfInfo <- function(){
+  sql <- "select *from t_sycm_salesForecast"
+  res <- sql_select(conn,sql)
+  return(res)
+}
+
+sfInfoCN <- function(){
+  data <-sfInfo()
+  names(data) <-c('商品ID','商品名称','系统预测未来7天销量','最近7天新增加购件数','最近7天新增收藏人数','最近180天累计加购件数','最近180天累计收藏人数')
+  return(data)
+}
 
 mydata <- shopInfoCN()
 mydata

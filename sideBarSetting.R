@@ -1,8 +1,8 @@
 sidebarMenu <-sidebarMenu(
   
 
- menuItem("流量",tabName = "row",icon=icon('clock'))
-# menuItem("column",tabName = "column",icon=icon('history')),
+ menuItem("流量",tabName = "row",icon=icon('clock')),
+ menuItem("销售预测",tabName = "column",icon=icon('history'))
  # # 1.01 出差外出数据----
  # menuItem("book",tabName = "book",icon=icon('plane')),
  # menuItem("series",tabName = "series",icon=icon('car-side')),
