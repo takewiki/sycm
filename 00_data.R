@@ -38,6 +38,25 @@ mydata
 
 
 
+#处理市场行业信息
+
+
+
+IndInfo <- function(){
+  sql <- "select *from t_sycm_marketInd"
+  res <- sql_select(conn,sql)
+  return(res)
+}
+
+IndInfoCN <- function(){
+  data <-IndInfo()
+  names(data) <-c('店铺行业排名','店铺支付金额','本店支付占比')
+  return(data)
+}
+
+
+
+
 # 设置3条消息框------
 msg <- list(
   list(from = "人力资源部1",
