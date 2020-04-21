@@ -18,6 +18,11 @@
     return(res)
   })
   
+  data4 <- reactive({
+    res <-   shopRankInfoCN()
+    return(res)
+  })
+  
   
 
     run_dataTable2('pre_data',data = data())
@@ -31,6 +36,10 @@
   run_dataTable2('pre_data_Ind',data = data3())
   
   run_download_xlsx(id = 'download_Ind',data = data3(),filename = '市场监控行业趋势.xlsx')
+  
+  run_dataTable2('pre_data_shopRank',data = data4())
+  
+  run_download_xlsx(id = 'download_shopRank',data = data4(),filename = 'TOP监控店铺.xlsx')
   
   
   

@@ -4,8 +4,8 @@ sidebarMenu <-sidebarMenu(
  menuItem("流量",tabName = "row",icon=icon('clock')),
  menuItem("销售预测",tabName = "column",icon=icon('history')),
  # # 1.01 出差外出数据----
- menuItem("市场监控看板",tabName = "book",icon=icon('plane'))
- # menuItem("series",tabName = "series",icon=icon('car-side')),
+ menuItem("市场监控看板",tabName = "book",icon=icon('plane')),
+ menuItem("TOP 监控店铺",tabName = "series",icon=icon('car-side'))
  # 
  # 
  #  # 1.02 components ----

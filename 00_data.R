@@ -1,6 +1,6 @@
 # 设置app标题-----
 
-app_title <-'生产参谋数据平台V2.0';
+app_title <-'生产参谋数据平台V3.0';
 
 
 
@@ -51,6 +51,21 @@ IndInfo <- function(){
 IndInfoCN <- function(){
   data <-IndInfo()
   names(data) <-c('店铺行业排名','店铺支付金额','本店支付占比')
+  return(data)
+}
+
+
+
+#处理门店监控
+shopRankInfo <- function(){
+  sql <- "select * from t_sycm_marketShopRank"
+  res <- sql_select(conn,sql)
+  return(res)
+}
+
+shopRankInfoCN <- function(){
+  data <-shopRankInfo()
+  names(data) <-c('店铺','行业排名','行业排名变动','交易指数','流量指数')
   return(data)
 }
 
